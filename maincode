@@ -2,6 +2,7 @@
 // In my forge asset library, I have folders titled "Tokens - PCs" and "Tokens - NPCs" with subfolders titled their names
 // Therefore, my pathing is 'Tokens%20-%20PCs/Playername/filename.png' 
 // This pathing has been easy for me to keep track of and I reccomend it
+// MAKE SURE THE TOKEN'S IMAGE IS ONE OF THESE FILES. The image WILL NOT SWITCH if the token's image is not one of the files below.
 const tokenA = 'Folder/Folder/fileA.png';
 const tokenB = 'Folder/Folder/fileB.pngg';
 const sizeA = 1;

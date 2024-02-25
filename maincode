@@ -1,4 +1,7 @@
 // Assuming these are the correct paths for your Foundry VTT setup
+// In my forge asset library, I have folders titled "Tokens - PCs" and "Tokens - NPCs" with subfolders titled their names
+// Therefore, my pathing is 'Tokens%20-%20PCs/Playername/filename.png' 
+// This pathing has been easy for me to keep track of and I reccomend it
 const tokenA = 'Folder/Folder/fileA.png';
 const tokenB = 'Folder/Folder/fileB.pngg';
 const sizeA = 1;

@@ -1,0 +1,37 @@
+// Assuming these are the correct paths for your Foundry VTT setup
+const tokenA = 'Folder/Folder/fileA.png';
+const tokenB = 'Folder/Folder/fileB.pngg';
+const sizeA = 1;
+const sizeB = 1;
+
+// Ensure at least one token is selected
+if (canvas.tokens.controlled.length === 0) {
+  console.error("No tokens are selected.");
+  return;
+}
+
+let selectedToken = canvas.tokens.controlled[0];
+
+// Determine the new texture and size based on the current one
+let newTexture, newSize;
+if (selectedToken.document.texture.src.includes(tokenA)) {
+    newTexture = tokenB;
+    newSize = sizeB;
+} else if (selectedToken.document.texture.src.includes(tokenB)) {
+    newTexture = tokenA;
+    newSize = sizeA;
+} else {
+    console.error("Selected token does not match the specified textures.");
+    return;
+}
+
+// Prepare the update data
+const updateData = {
+    _id: selectedToken.id,
+    texture: { src: newTexture },
+    width: newSize,
+    height: newSize
+};
+
+// Perform the update
+canvas.scene.updateEmbeddedDocuments("Token", [updateData]);
